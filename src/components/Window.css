@@ -30,7 +30,7 @@
 /* #region header */
 
 .Window--header {
-  height: 42px;
+  height: 7%;
   display: flex;
   align-items: center;
   gap: 10px;
@@ -61,7 +61,7 @@ a:hover {
 /* #region main */
 
 .Window--main {
-  height: 360px;
+  height: 65%;
   background-color:#ffd500;
   padding: 30px;
   box-sizing: inherit;
@@ -85,7 +85,7 @@ a:hover {
   display: block;
   width: 150px;
   height: 40px;
-  margin: 10px auto 0 auto;
+  margin: 4% auto 0 auto;
   font-size: 14px;
   font-family: inherit;
   font-weight: 700;
@@ -107,7 +107,7 @@ a:hover {
 /* #region answer */
 
 .Window--answer {
-  height: 50%;
+  height: 28%;
   padding: 2.5%;
   box-sizing: inherit;
 }
