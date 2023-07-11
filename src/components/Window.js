@@ -5,10 +5,10 @@ function Window() {
   return (
     <div className="Window">
       <div className="Window--header">
-      <a href="https://github.com/moveandgethurt" target="_blank">
+      <a href="https://github.com/moveandgethurt" target="_blank" rel="noreferrer">
         <div className="Window--header--dot yellow"></div>
       </a>
-      <a href="https://www.linkedin.com/in/kateryna-korotkova/" target="_blank">
+      <a href="https://www.linkedin.com/in/kateryna-korotkova/" target="_blank" rel="noreferrer">
         <div className="Window--header--dot blue"></div>
       </a>
       </div>
