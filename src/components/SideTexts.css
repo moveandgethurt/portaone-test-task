@@ -1,0 +1,36 @@
+.SideTexts {
+  display: flex;
+  justify-content: space-between;
+}
+
+.SideTexts > p {
+  display: block;
+  width: 10%;
+  line-height: 2em;
+  position: absolute;
+  font-size: 1em;
+  top: 30%;
+}
+
+.SideTexts > p:first-of-type {
+  left: 6%;
+}
+
+.SideTexts > p:last-of-type {
+  right: 6%;
+}
+
+@media(max-width: 900px) {
+  .SideTexts {
+    flex-direction: column;
+    margin-bottom: 24px;
+  }
+
+  .SideTexts > p {
+    position: unset;
+    display: inline;
+    width: 75%;
+    margin: 24px auto 0 auto;
+    text-align: center;
+  }
+}

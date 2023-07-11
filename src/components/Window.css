@@ -1,0 +1,144 @@
+.Window {
+  width: 60%; 
+  height: 600px;
+  margin: 20px auto 0 auto;
+  background-color: whitesmoke;
+  border-radius: 20px;
+  border: 3px solid black;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.Window--header,
+.Window--main,
+.Window--answer {
+  width: 100%;
+}
+
+.Window--header,
+.Window--main {
+  border-bottom: 3px solid black;
+}
+
+.Window--header--dot,
+.Window--main--textarea,
+.Window--main--button {
+  border: 3px solid black;
+}
+
+/* #region header */
+
+.Window--header {
+  height: 42px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-left: 15px;
+  box-sizing: inherit;
+}
+
+a:hover {
+  transform: scale(0.9);
+}
+
+.Window--header--dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.yellow {
+  background-color: #ffd500;
+}
+
+.blue {
+  background-color: #85b6ff;
+}
+
+/* #endregion */
+
+/* #region main */
+
+.Window--main {
+  height: 360px;
+  background-color:#ffd500;
+  padding: 30px;
+  box-sizing: inherit;
+}
+
+.Window--main--textarea {
+  display: block;
+  width: 75%;
+  height: 175px;
+  margin: 0 auto;
+  border-radius: 70px;
+  text-align: center;
+  padding: 40px;
+  font-size: 16px;
+  font-family: inherit;
+  resize: none;
+}
+
+.Window--main--button {
+  background-color: #85b6ff;
+  display: block;
+  width: 150px;
+  height: 40px;
+  margin: 10px auto 0 auto;
+  font-size: 14px;
+  font-family: inherit;
+  font-weight: 700;
+  letter-spacing: 0.75px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.Window--main--button:hover {
+  background-color: #699bf7;
+}
+
+.Window--main--button:active {
+  transform: scale(0.9);
+}
+
+/* #endregion */
+
+/* #region answer */
+
+.Window--answer {
+  height: 198px;
+  padding: 20px;
+  box-sizing: inherit;
+}
+
+.Window--answer-box {
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  border-radius: 10px;
+  background-color: #bde3ff;
+  box-sizing: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5%;
+}
+
+.Window--the-answer {
+  margin: 0;
+  font-size: 18px;
+  text-align: center;
+}
+
+/* #endregion */
+
+@media(max-width: 900px) {
+  .Window {
+    width: 75%;
+  }
+
+  .Window--the-answer {
+    font-size: 16px;
+  }
+}
