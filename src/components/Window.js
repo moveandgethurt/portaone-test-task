@@ -13,7 +13,7 @@ function Window() {
       </a>
       </div>
       <div className="Window--main">
-        <textarea className="Window--main--textarea"></textarea>
+        <textarea rows={10} className="Window--main--textarea"></textarea>
         <button className="Window--main--button">НАТИСНУТИ</button>
       </div>
       <div className="Window--answer">
