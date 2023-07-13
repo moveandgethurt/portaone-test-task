@@ -22,8 +22,7 @@
 }
 
 .Window--header--dot,
-.Window--main--textarea,
-.Window--main--button {
+.Window--main--textarea {
   border: 3px solid black;
 }
 
@@ -78,28 +77,6 @@ a:hover {
   font-size: 16px;
   font-family: inherit;
   resize: none;
-}
-
-.Window--main--button {
-  background-color: #85b6ff;
-  display: block;
-  width: 150px;
-  height: 40px;
-  margin: 4% auto 0 auto;
-  font-size: 14px;
-  font-family: inherit;
-  font-weight: 700;
-  letter-spacing: 0.75px;
-  border-radius: 20px;
-  cursor: pointer;
-}
-
-.Window--main--button:hover {
-  background-color: #699bf7;
-}
-
-.Window--main--button:active {
-  transform: scale(0.9);
 }
 
 /* #endregion */
