@@ -1,7 +1,7 @@
 import React from 'react';
 import './Window.css';
 
-function Window() {
+export default function Window() {
   function returnSymbol(text) {
     function findUnique(str) {
       let unique = '';
@@ -14,8 +14,6 @@ function Window() {
     }
 
     text = text.split(' ')
-    // console.log(`splitted text - [${text}]`)
-
     let uniqueStr = '';
 
     text.forEach((word) => {
@@ -23,28 +21,17 @@ function Window() {
         uniqueStr += findUnique(word)[0]
       }
     })
-    // console.log('str w/ unique symbols - ' + uniqueStr)
 
     return findUnique(uniqueStr) 
             ? findUnique(uniqueStr)[0] 
             : 'No unique symbols found'
   }
 
-  console.log('test task answer - ' + returnSymbol(`The Tao gave birth to machine language.  Machine language gave birth
-  to the assembler.
-  The assembler gave birth to the compiler.  Now there are ten thousand
-  languages.
-  Each language has its purpose, however humble.  Each language
-  expresses the Yin and Yang of software.  Each language has its place within
-  the Tao.
-  But do not program in COBOL if you can avoid it.
-          -- Geoffrey James, "The Tao of Programming"`))
-  
-  console.log('regular answer - ' + returnSymbol(`aaa bbc`))
-  console.log('empty string - ' + returnSymbol(``))
-  console.log('string w/ a space - ' + returnSymbol(` `))
-  console.log('no unique symbols - ' + returnSymbol(`aaa bbb`))
+  const [text, setText] = React.useState('');
 
+  const handleText = (event) => {
+    setText(event.target.value);
+  };
 
   return (
     <div className="Window">
@@ -57,16 +44,21 @@ function Window() {
       </a>
       </div>
       <div className="Window--main">
-        <textarea rows={10} className="Window--main--textarea"></textarea>
-        <button className="Window--main--button">НАТИСНУТИ</button>
+      <form className="form--container">
+        <textarea 
+          rows={10} 
+          className="Window--main--textarea" 
+          placeholder='Enter your text...'
+          value={text}
+          onChange={handleText}>
+        </textarea>
+      </form>
       </div>
       <div className="Window--answer">
         <div className="Window--answer-box">
-          <p className="Window--the-answer">the answer will be here</p>
+          <p className="Window--the-answer">{returnSymbol(text)}</p>
         </div>
       </div>
     </div>
   );
 }
-
-export default Window;
